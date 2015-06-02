@@ -1,37 +1,35 @@
 {
-  "name": "react-starterify",
-  "version": "1.0.1",
-  "description": "React JS application skeleton using Browserify and other awesome tools",
+  "name": "topshelf",
+  "version": "0.0.1",
+  "description": "Reading lists of influential people",
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Granze/react-starterify"
+    "url": "https://github.com/suttonj/topshelf"
   },
   "keywords": [
-    "gulp",
-    "react",
-    "browserify",
-    "seed",
-    "boilerplate",
-    "kickstarter",
-    "ES6",
-    "6to5",
-    "babel",
-    "mocha",
-    "chai"
+    "books",
+    "reading",
+    "lists",
+    "influential",
+    "influence",
+    "power",
+    "knowledge",
+    "leaders"
   ],
   "scripts": {
     "test": "mocha --reporter nyan --compilers js:babel/register --recursive"
   },
-  "author": "Maurizio Mangione",
-  "license": "MIT",
+  "author": "Jeremy Sutton",
+  "license": "GPL",
   "bugs": {
-    "url": "https://github.com/Granze/react-starterify/issues"
+    "url": "https://github.com/suttonj/topshelf/issues"
   },
-  "homepage": "https://github.com/Granze/react-starterify",
+  "homepage": "http://jeremyssutton.com",
   "dependencies": {
     "react": "^0.13.3",
-    "superagent": "^1.2.0"
+    "superagent": "^1.2.0",
+    "react-router": "^0.13.3"
   },
   "devDependencies": {
     "babel": "^5.4.7",

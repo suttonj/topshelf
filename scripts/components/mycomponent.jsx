@@ -1,25 +1,19 @@
 import React from 'react';
-import packageJSON from '../../package.json';
 
-let Mycomponent = React.createClass({
-  render: function() {
-    let version = packageJSON.version,
-        deps, devDeps;
-
-    deps = Object.keys(packageJSON.dependencies).map((dep, i) => <li key={i}>{dep}</li>);
-    devDeps = Object.keys(packageJSON.devDependencies).map((dep, i) => <li key={i + 10}>{dep}</li>);
-
+let MyComponent = React.createClass({
+  render () {
     return (
-      <div>
-        <h1 className="Mycomponent">Welcome to &#9883; React Starterify</h1>
-        <span>version {version}</span>
-        <p>Powered by:</p>
-        <ul>
-          {deps.concat(devDeps)}
-        </ul>
+      <div className="Detail">
+        <h1 className="Heading Heading--alt">Welcome!</h1>
+        <div className="Content padBox">
+          <p>This app is rendered on the server and the client with React</p>
+          <p>You can actually turn off JavaScript and everything is still fully functional</p>
+          <p>Go ahead and create a new contact over on the left with and without JS enabled</p>
+          <p><a href="https://github.com/rackt/react-router-mega-demo">Code can be found here</a></p>
+        </div>
       </div>
     );
   }
 });
 
-export default Mycomponent;
+export default MyComponent;
