@@ -16,10 +16,11 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     browserSync = require('browser-sync'),
     sourcemaps = require('gulp-sourcemaps'),
+    concat = require('gulp-concat'),
     reload = browserSync.reload,
     p = {
       jsx: './scripts/app.jsx',
-      scss: 'styles/main.scss',
+      scss: 'styles/*',
       bundle: 'app.js',
       distJs: 'dist/js',
       distCss: 'dist/css'
@@ -73,6 +74,7 @@ gulp.task('styles', function() {
     .on('error', notify.onError())
     .pipe(autoprefixer('last 1 version'))
     .pipe(csso())
+    .pipe(concat('style.css'))
     .pipe(gulp.dest(p.distCss))
     .pipe(reload({stream: true}));
 });
