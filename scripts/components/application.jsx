@@ -45,9 +45,6 @@ class Application extends React.Component {
       <div id="container">
         <div id="main">
           <div className="layout">
-            <div className="TopBar">
-              Reading Lists of Influential People
-            </div>
 
             <AppNav items={this.renderPersons()} />
 

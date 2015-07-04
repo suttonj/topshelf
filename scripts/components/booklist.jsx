@@ -37,7 +37,7 @@ export default class BookList extends React.Component {
     let books = [];
     for (let book of data.books) {
       books.push(
-        <div className="pure-u-1-3">
+        <div className="pure-u-1-4">
           <Book data={book} />
         </div>
       );

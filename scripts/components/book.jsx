@@ -1,6 +1,6 @@
 import React from "react";
 
-import request from 'superagent';
+import Rating from "../components/rating.jsx";
 
 export default class Book extends React.Component {
 
@@ -19,6 +19,7 @@ export default class Book extends React.Component {
     return (
       <div className="book-panel">
           <img className="thumbnail pure-img-responsive" key={data._id} src={data.image} />
+          <Rating data={data} />
           <div className="book-title">
             <span className="small-title">{data.title}</span>
           </div>
@@ -26,7 +27,7 @@ export default class Book extends React.Component {
             <span className="small-description">{data.description}</div>
           </div>*/}
           <div className="book-author">
-            <span className="small-author">{data.author}</span>
+            <span className="small-author">by {data.author}</span>
           </div>
           
       </div>

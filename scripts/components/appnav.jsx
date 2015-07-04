@@ -25,7 +25,7 @@ class AppNav extends React.Component {
   render() {
 
     return (
-      <div className="menu">
+      <div id="menu">
         <h2 className="pure-menu-heading">Reading Lists</h2>
         <div className="pure-menu">
           <ul className="pure-menu-list">
