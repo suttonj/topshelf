@@ -12,7 +12,7 @@ export default class Rating extends React.Component {
 
   render() {
     let data = this.props.data;
-    console.log('rendering book: ');
+    console.log('rendering rating: ');
     console.dir(data);
     return (
       <div className="rating">
