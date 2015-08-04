@@ -20,8 +20,12 @@ var gulp = require('gulp'),
     reload = browserSync.reload,
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
+    gulpCopy = require('gulp-copy'),
+    babel = require('gulp-babel'),
+    path = require('path'),
     p = {
       jsx: './scripts/app.jsx',
+      server: './*.jsx',
       scss: 'styles/*',
       img: 'styles/images/*',
       bundle: 'app.js',
@@ -40,6 +44,12 @@ gulp.task('browserSync', function() {
       baseDir: './'
     }
   });
+});
+
+gulp.task('server', function() {
+    return gulp.src(p.server)
+        .pipe(babel())
+        .pipe(gulp.dest('./'));
 });
 
 gulp.task('watchify', function() {
@@ -105,7 +115,7 @@ gulp.task('watchTask', function() {
 });
 
 gulp.task('watch', ['clean'], function() {
-  gulp.start(['browserSync', 'watchTask', 'watchify', 'styles', 'images', 'lint']);
+  gulp.start(['browserSync', 'server', 'watchTask', 'watchify', 'styles', 'images', 'lint']);
 });
 
 gulp.task('build', ['clean'], function() {
