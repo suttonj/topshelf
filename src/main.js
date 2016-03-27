@@ -14,8 +14,12 @@ import { Router, browserHistory } from 'react-router';
 import Routes from './common/components/Routes';
 
 // Base styling
-import './common/base.css';
-
+//import './common/base.css';
+import './common/pure.css';
+// import "./common/sidebar.css";
+import './common/pure-base.css';
+import './common/grids-responsive.css';
+import './common/main.css';
 
 // ID of the DOM element to mount app on
 const DOM_APP_EL_ID = 'app';

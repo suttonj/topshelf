@@ -1,0 +1,339 @@
+/* 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+*/
+html, body, .viewport, #app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  margin: 0;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+h1, h2 {
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: #007adc;
+}
+
+a.active {
+  color: #ff3b30;
+}
+
+#main {
+  display: flex;
+  flex-direction: row;
+  flex: 1 0 auto;
+  height: 100%;
+}
+
+#content {
+    flex: 1;
+    padding: 0 2em;
+    margin: 0;
+}
+
+.App {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.App--loading {
+  opacity: 0.5;
+}
+
+.TopBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  line-height: 20px;
+  background: #ccc;
+  font-size: 14px;
+  text-align: center;
+}
+
+.topleft-logo {
+  margin: 0 auto;
+  padding: 35px;
+}
+
+.Master {
+  position: absolute;
+  left: 0;
+  width: 200px;
+  top: 0;
+  bottom: 0;
+}
+
+.list-page {
+  position: absolute;
+  left: 200px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  max-width: 960px;
+}
+
+.rl-header {
+  height: 100px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.rl-title {
+  padding: 40px;
+  font-size: 22px;
+  color: #444;
+}
+
+.rl-person-info {
+  width: 300px;
+  height: 100px;
+  position: absolute;
+  top: 1px;
+  right: 90px;
+}
+
+.rl-person-bio {
+  width: 180px;
+  height: 100px;
+  position: relative;
+  float: left;
+  text-align: right;
+}
+
+
+.rl-person-thumbnail {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  float: right;
+  -webkit-transition: all;
+  -webkit-border-radius: 50px;
+}
+
+.PersonInfo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  box-sizing: border-box;
+  transition: all 500ms ease;
+}
+
+.PersonInfo_Name {
+  display: block;
+  padding: 4px 8px;
+  font-size: 120%;
+}
+
+.PersonList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.PersonList__Person {
+  box-sizing: border-box;
+  transition: all 500ms ease;
+}
+
+.PersonList__Link {
+  display: block;
+  padding: 4px 8px;
+  font-size: 120%;
+}
+
+.PersonList__Link--new {
+  color: #4cd964;
+}
+
+.Heading {
+  margin: 0;
+  text-align: center;
+  padding: 10px;
+  background: #27897A;
+  color: #fff;
+  font-size: 100%;
+  box-sizing: border-box;
+  height: 40px;
+}
+
+.Heading--alt {
+  background-color: #27897A;
+}
+
+.list-content {
+  position: absolute;
+  overflow: scroll;
+  background: #fff;
+  min-width: 640px;
+}
+
+.padBox {
+  padding: 20px;
+}
+
+.Avatar {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #ccc;
+  display: inline-block;
+  margin: 20px;
+}
+
+.KVSet {
+  margin: 20px;
+}
+
+.KV {
+  display: flex;
+  flex-direction: row;
+}
+
+.KV__Key,
+.KV__Value {
+  box-sizing: border-box;
+  margin: 10px;
+  font-size: 150%;
+}
+
+.KV__Key {
+  width: 150px;
+  color: hsl(0, 0%, 75%);
+}
+
+.detail-enter {
+  opacity: 0.01;
+  transition: opacity 500ms ease;
+}
+
+.detail-enter.detail-enter-active {
+  opacity: 1;
+}
+
+.detail-leave {
+  transition: opacity 500ms ease;
+  opacity: 1;
+}
+
+.detail-leave.detail-leave-active {
+  opacity: 0.01;
+}
+
+/* BOOKS */
+
+.book-panel {
+  position: relative;
+  height: 290px;
+  width: 150px;
+  display: inline-block;
+  padding: 0 15px 20px;
+  cursor:pointer;
+}
+
+.books-row {
+  margin-bottom: 20px;
+  height: 340px;
+}
+
+.thumbnail {
+  min-width: 150px;
+  height: 230px;
+}
+
+.circle-portrait {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
+
+.book-title {
+  line-height: 1.2em;
+  font-weight: 500;
+  color: #000;
+  font-size: 12px;
+  padding-bottom: 3px;
+  padding-top: 6px;
+}
+
+.book-author {
+  line-height: 1.2em;
+  font-size: 11px;
+}
+
+/* RATING */
+
+.rating {
+  position: relative;
+  margin: -36px 0 0 0;
+  width: 100%;
+  font-size: 10px;
+  text-align: center;
+  z-index: 999;
+  height: 40px;
+}
+
+.rating a {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  margin: 0 -3px;
+  background-color: #444;
+}
+
+.badge {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  line-height: 1;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  background-color: #a6afb8;
+  border-radius: 10px;
+  float: right;
+}
+
+.rating a span {
+  display: block;
+  clear: both;
+  margin: 2px 5px 0 5px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #eee;
+}

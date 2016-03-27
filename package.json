@@ -1,7 +1,7 @@
 {
-  "name": "essential-react",
-  "version": "0.4.0",
-  "description": "A minimal skeleton for building testable React apps using Babel",
+  "name": "topshelf",
+  "version": "0.0.2",
+  "description": "A curated reading list with recommended books of the most influential people.",
   "main": "src/main.js",
   "scripts": {
     "postinstall": "npm run build",
@@ -13,20 +13,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pheuter/essential-react.git"
+    "url": "https://github.com/suttonj/topshelf.git"
   },
   "keywords": [
-    "skeleton",
-    "template",
+    "books",
+    "reading list",
     "react",
-    "quickstart"
+    "influential"
   ],
-  "author": "Mark Fayngersh",
-  "license": "MIT",
+  "author": "Jeremy Sutton",
   "bugs": {
-    "url": "https://github.com/pheuter/essential-react/issues"
+    "url": "https://github.com/suttonj/topshelf/issues"
   },
-  "homepage": "https://github.com/pheuter/essential-react",
+  "homepage": "https://github.com/suttonj/topshelf",
   "devDependencies": {
     "autoprefixer": "^6.0.2",
     "ava": "^0.12.0",
@@ -57,6 +56,7 @@
     "express": "^4.12.3",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
+    "react-addons-css-transition-group": "^0.14.7",
     "react-router": "^2.0.0"
   }
 }
